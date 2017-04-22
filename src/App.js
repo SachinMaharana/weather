@@ -56,9 +56,7 @@ class WeatherDisplay extends Component {
     return (
       <div>
         <h1>
-          {weather.main}
-          in
-          {weatherData.name}
+          {weather.main} in {weatherData.name}
           <img src={iconUrl} alt={weatherData.description} />
         </h1>
         <p> Current: {weatherData.main.temp} </p>
@@ -93,9 +91,9 @@ class App extends Component {
               });
             }}
           >
-            {place.name} {" "}{" "}
+            {place.name}
           </button>
-        ))} {" "}{" "}
+        ))}
       </div>
     );
   }
