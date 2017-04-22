@@ -40,7 +40,7 @@ class WeatherDisplay extends Component {
   componentDidMount() {
     const zip = this.props.zip;
     console.log(zip);
-    const URL = `https://crossorigin.me/http://api.openweathermap.org/data/2.5/weather?q=
+    const URL = `https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?q=
       ${zip}&appid=b1b35bba8b434a28a0be2a3e1071ae5b&units=imperial`;
     fetch(URL).then(res => res.json()).then(json => {
       this.setState({
@@ -56,25 +56,15 @@ class WeatherDisplay extends Component {
     return (
       <div>
         <h1>
-          {" "}
           {weather.main}
-          {" "}
           in
-          {" "}
           {weatherData.name}
-          {" "}
           <img src={iconUrl} alt={weatherData.description} />
-          {" "}
         </h1>
-        {" "}
         <p> Current: {weatherData.main.temp} </p>
-        {" "}
         <p> High: {weatherData.main.temp_max} </p>
-        {" "}
         <p> Low: {weatherData.main.temp_min} </p>
-        {" "}
         <p> Wind Speed: {weatherData.wind.speed} </p>
-        {" "}
       </div>
     );
   }
@@ -103,9 +93,9 @@ class App extends Component {
               });
             }}
           >
-            {place.name}{" "}
+            {place.name} {" "}{" "}
           </button>
-        ))}{" "}
+        ))} {" "}{" "}
       </div>
     );
   }
