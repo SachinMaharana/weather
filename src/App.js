@@ -59,6 +59,7 @@ class WeatherDisplay extends Component {
           {weather.main} in {weatherData.name}
           <img src={iconUrl} alt={weatherData.description} />
         </h1>
+        
         <p> Current: {weatherData.main.temp} </p>
         <p> High: {weatherData.main.temp_max} </p>
         <p> Low: {weatherData.main.temp_min} </p>
