@@ -40,7 +40,7 @@ class WeatherDisplay extends Component {
   componentDidMount() {
     const zip = this.props.zip;
     console.log(zip);
-    const URL = `http://crossorigin.me/http://api.openweathermap.org/data/2.5/weather?q=
+    const URL = `https://crossorigin.me/http://api.openweathermap.org/data/2.5/weather?q=
       ${zip}&appid=b1b35bba8b434a28a0be2a3e1071ae5b&units=imperial`;
     fetch(URL).then(res => res.json()).then(json => {
       this.setState({
